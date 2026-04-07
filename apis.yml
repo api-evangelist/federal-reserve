@@ -12,8 +12,8 @@ created: '2024-12-03'
 modified: '2026-03-16'
 position: Consumer
 tags:
-  - Federal Government
   - Economics
+  - Federal Government
   - Finance
 url: >-
   https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/apis.yml
@@ -22,7 +22,6 @@ apis:
   - aid: federal-reserve:federal-reserve
     name: Federal Reserve FRED API
     tags:
-      - API
       - Economics
     humanURL: https://fred.stlouisfed.org/docs/api/fred
     baseURL: https://api.stlouisfed.org/fred
