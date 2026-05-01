@@ -1,0 +1,184 @@
+openapi: 3.0.3
+info:
+  title: Federal Reserve FRED API
+  description: >-
+    The FRED API allows developers to retrieve economic data from the Federal
+    Reserve Bank of St. Louis including categories, releases, series, sources,
+    tags, and observations across thousands of economic time series.
+  version: '1.0'
+  contact:
+    name: Federal Reserve Bank of St. Louis
+    url: https://fred.stlouisfed.org/docs/api/fred/
+servers:
+  - url: https://api.stlouisfed.org/fred
+    description: Production
+security:
+  - ApiKey: []
+paths:
+  /category:
+    get:
+      summary: Get a category
+      operationId: getCategory
+      parameters:
+        - name: category_id
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Category record
+  /category/children:
+    get:
+      summary: Get child categories
+      operationId: getCategoryChildren
+      parameters:
+        - name: category_id
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Child categories
+  /category/series:
+    get:
+      summary: Get series in a category
+      operationId: getCategorySeries
+      parameters:
+        - name: category_id
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Series records
+  /releases:
+    get:
+      summary: Get all releases
+      operationId: getReleases
+      responses:
+        '200':
+          description: Releases
+  /release:
+    get:
+      summary: Get a release
+      operationId: getRelease
+      parameters:
+        - name: release_id
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Release record
+  /release/series:
+    get:
+      summary: Get series for a release
+      operationId: getReleaseSeries
+      parameters:
+        - name: release_id
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Series records
+  /series:
+    get:
+      summary: Get a series
+      operationId: getSeries
+      parameters:
+        - name: series_id
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Series record
+  /series/observations:
+    get:
+      summary: Get observations for a series
+      operationId: getSeriesObservations
+      parameters:
+        - name: series_id
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: observation_start
+          in: query
+          schema:
+            type: string
+            format: date
+        - name: observation_end
+          in: query
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: Observation records
+  /series/search:
+    get:
+      summary: Search series by text
+      operationId: searchSeries
+      parameters:
+        - name: search_text
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Search results
+  /sources:
+    get:
+      summary: Get all sources
+      operationId: getSources
+      responses:
+        '200':
+          description: Sources
+  /source:
+    get:
+      summary: Get a source
+      operationId: getSource
+      parameters:
+        - name: source_id
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Source record
+  /tags:
+    get:
+      summary: Get all tags
+      operationId: getTags
+      responses:
+        '200':
+          description: Tags
+  /related_tags:
+    get:
+      summary: Get related tags
+      operationId: getRelatedTags
+      parameters:
+        - name: tag_names
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Related tags
+components:
+  securitySchemes:
+    ApiKey:
+      type: apiKey
+      in: query
+      name: api_key
