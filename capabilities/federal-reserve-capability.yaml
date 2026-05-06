@@ -1,0 +1,576 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Federal Reserve FRED API
+  description: The FRED API allows developers to retrieve economic data from the Federal Reserve Bank of St. Louis including
+    categories, releases, series, sources, tags, and observations across thousands of economic time series.
+  tags:
+  - Federal
+  - Reserve
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: federal-reserve
+    baseUri: https://api.stlouisfed.org/fred
+    description: Federal Reserve FRED API HTTP API.
+    authentication:
+      type: apikey
+      in: query
+      name: api_key
+      value: '{{FEDERAL_RESERVE_TOKEN}}'
+    resources:
+    - name: category
+      path: /category
+      operations:
+      - name: getcategory
+        method: GET
+        description: Get a category
+        inputParameters:
+        - name: category_id
+          in: query
+          type: integer
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: category-children
+      path: /category/children
+      operations:
+      - name: getcategorychildren
+        method: GET
+        description: Get child categories
+        inputParameters:
+        - name: category_id
+          in: query
+          type: integer
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: category-series
+      path: /category/series
+      operations:
+      - name: getcategoryseries
+        method: GET
+        description: Get series in a category
+        inputParameters:
+        - name: category_id
+          in: query
+          type: integer
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: releases
+      path: /releases
+      operations:
+      - name: getreleases
+        method: GET
+        description: Get all releases
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: release
+      path: /release
+      operations:
+      - name: getrelease
+        method: GET
+        description: Get a release
+        inputParameters:
+        - name: release_id
+          in: query
+          type: integer
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: release-series
+      path: /release/series
+      operations:
+      - name: getreleaseseries
+        method: GET
+        description: Get series for a release
+        inputParameters:
+        - name: release_id
+          in: query
+          type: integer
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: series
+      path: /series
+      operations:
+      - name: getseries
+        method: GET
+        description: Get a series
+        inputParameters:
+        - name: series_id
+          in: query
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: series-observations
+      path: /series/observations
+      operations:
+      - name: getseriesobservations
+        method: GET
+        description: Get observations for a series
+        inputParameters:
+        - name: series_id
+          in: query
+          type: string
+          required: true
+        - name: observation_start
+          in: query
+          type: string
+        - name: observation_end
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: series-search
+      path: /series/search
+      operations:
+      - name: searchseries
+        method: GET
+        description: Search series by text
+        inputParameters:
+        - name: search_text
+          in: query
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: sources
+      path: /sources
+      operations:
+      - name: getsources
+        method: GET
+        description: Get all sources
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: source
+      path: /source
+      operations:
+      - name: getsource
+        method: GET
+        description: Get a source
+        inputParameters:
+        - name: source_id
+          in: query
+          type: integer
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: tags
+      path: /tags
+      operations:
+      - name: gettags
+        method: GET
+        description: Get all tags
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: related-tags
+      path: /related_tags
+      operations:
+      - name: getrelatedtags
+        method: GET
+        description: Get related tags
+        inputParameters:
+        - name: tag_names
+          in: query
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: federal-reserve-rest
+    description: REST adapter for Federal Reserve FRED API.
+    resources:
+    - path: /category
+      name: getcategory
+      operations:
+      - method: GET
+        name: getcategory
+        description: Get a category
+        call: federal-reserve.getcategory
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /category/children
+      name: getcategorychildren
+      operations:
+      - method: GET
+        name: getcategorychildren
+        description: Get child categories
+        call: federal-reserve.getcategorychildren
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /category/series
+      name: getcategoryseries
+      operations:
+      - method: GET
+        name: getcategoryseries
+        description: Get series in a category
+        call: federal-reserve.getcategoryseries
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /releases
+      name: getreleases
+      operations:
+      - method: GET
+        name: getreleases
+        description: Get all releases
+        call: federal-reserve.getreleases
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /release
+      name: getrelease
+      operations:
+      - method: GET
+        name: getrelease
+        description: Get a release
+        call: federal-reserve.getrelease
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /release/series
+      name: getreleaseseries
+      operations:
+      - method: GET
+        name: getreleaseseries
+        description: Get series for a release
+        call: federal-reserve.getreleaseseries
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /series
+      name: getseries
+      operations:
+      - method: GET
+        name: getseries
+        description: Get a series
+        call: federal-reserve.getseries
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /series/observations
+      name: getseriesobservations
+      operations:
+      - method: GET
+        name: getseriesobservations
+        description: Get observations for a series
+        call: federal-reserve.getseriesobservations
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /series/search
+      name: searchseries
+      operations:
+      - method: GET
+        name: searchseries
+        description: Search series by text
+        call: federal-reserve.searchseries
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /sources
+      name: getsources
+      operations:
+      - method: GET
+        name: getsources
+        description: Get all sources
+        call: federal-reserve.getsources
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /source
+      name: getsource
+      operations:
+      - method: GET
+        name: getsource
+        description: Get a source
+        call: federal-reserve.getsource
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /tags
+      name: gettags
+      operations:
+      - method: GET
+        name: gettags
+        description: Get all tags
+        call: federal-reserve.gettags
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /related_tags
+      name: getrelatedtags
+      operations:
+      - method: GET
+        name: getrelatedtags
+        description: Get related tags
+        call: federal-reserve.getrelatedtags
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: federal-reserve-mcp
+    transport: http
+    description: MCP adapter for Federal Reserve FRED API for AI agent use.
+    tools:
+    - name: getcategory
+      description: Get a category
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getcategory
+      with:
+        category_id: tools.category_id
+      inputParameters:
+      - name: category_id
+        type: integer
+        description: category_id
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getcategorychildren
+      description: Get child categories
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getcategorychildren
+      with:
+        category_id: tools.category_id
+      inputParameters:
+      - name: category_id
+        type: integer
+        description: category_id
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getcategoryseries
+      description: Get series in a category
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getcategoryseries
+      with:
+        category_id: tools.category_id
+      inputParameters:
+      - name: category_id
+        type: integer
+        description: category_id
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getreleases
+      description: Get all releases
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getreleases
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getrelease
+      description: Get a release
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getrelease
+      with:
+        release_id: tools.release_id
+      inputParameters:
+      - name: release_id
+        type: integer
+        description: release_id
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getreleaseseries
+      description: Get series for a release
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getreleaseseries
+      with:
+        release_id: tools.release_id
+      inputParameters:
+      - name: release_id
+        type: integer
+        description: release_id
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getseries
+      description: Get a series
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getseries
+      with:
+        series_id: tools.series_id
+      inputParameters:
+      - name: series_id
+        type: string
+        description: series_id
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getseriesobservations
+      description: Get observations for a series
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getseriesobservations
+      with:
+        series_id: tools.series_id
+        observation_start: tools.observation_start
+        observation_end: tools.observation_end
+      inputParameters:
+      - name: series_id
+        type: string
+        description: series_id
+        required: true
+      - name: observation_start
+        type: string
+        description: observation_start
+      - name: observation_end
+        type: string
+        description: observation_end
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: searchseries
+      description: Search series by text
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.searchseries
+      with:
+        search_text: tools.search_text
+      inputParameters:
+      - name: search_text
+        type: string
+        description: search_text
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getsources
+      description: Get all sources
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getsources
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getsource
+      description: Get a source
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getsource
+      with:
+        source_id: tools.source_id
+      inputParameters:
+      - name: source_id
+        type: integer
+        description: source_id
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: gettags
+      description: Get all tags
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.gettags
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getrelatedtags
+      description: Get related tags
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: federal-reserve.getrelatedtags
+      with:
+        tag_names: tools.tag_names
+      inputParameters:
+      - name: tag_names
+        type: string
+        description: tag_names
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    FEDERAL_RESERVE_TOKEN: FEDERAL_RESERVE_TOKEN
