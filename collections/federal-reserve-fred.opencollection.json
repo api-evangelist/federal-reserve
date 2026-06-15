@@ -1,0 +1,241 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Federal Reserve FRED API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get a category",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/category",
+        "params": [
+          {
+            "name": "category_id",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get a category"
+    },
+    {
+      "info": {
+        "name": "Get child categories",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/category/children",
+        "params": [
+          {
+            "name": "category_id",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get child categories"
+    },
+    {
+      "info": {
+        "name": "Get series in a category",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/category/series",
+        "params": [
+          {
+            "name": "category_id",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get series in a category"
+    },
+    {
+      "info": {
+        "name": "Get all releases",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/releases"
+      },
+      "docs": "Get all releases"
+    },
+    {
+      "info": {
+        "name": "Get a release",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/release",
+        "params": [
+          {
+            "name": "release_id",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get a release"
+    },
+    {
+      "info": {
+        "name": "Get series for a release",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/release/series",
+        "params": [
+          {
+            "name": "release_id",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get series for a release"
+    },
+    {
+      "info": {
+        "name": "Get a series",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/series",
+        "params": [
+          {
+            "name": "series_id",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get a series"
+    },
+    {
+      "info": {
+        "name": "Get observations for a series",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/series/observations",
+        "params": [
+          {
+            "name": "series_id",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "observation_start",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "observation_end",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get observations for a series"
+    },
+    {
+      "info": {
+        "name": "Search series by text",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/series/search",
+        "params": [
+          {
+            "name": "search_text",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Search series by text"
+    },
+    {
+      "info": {
+        "name": "Get all sources",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/sources"
+      },
+      "docs": "Get all sources"
+    },
+    {
+      "info": {
+        "name": "Get a source",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/source",
+        "params": [
+          {
+            "name": "source_id",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get a source"
+    },
+    {
+      "info": {
+        "name": "Get all tags",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/tags"
+      },
+      "docs": "Get all tags"
+    },
+    {
+      "info": {
+        "name": "Get related tags",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.stlouisfed.org/fred/related_tags",
+        "params": [
+          {
+            "name": "tag_names",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get related tags"
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,956 @@
+{
+  "item": [
+    {
+      "id": "a39a959b-c125-4599-9ece-be73cd1521c5",
+      "name": "Get a category",
+      "request": {
+        "name": "Get a category",
+        "description": {},
+        "url": {
+          "path": [
+            "category"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "category_id",
+              "value": "<integer>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "bd675d71-d92c-40af-b247-1e3aa26bfc6a",
+          "name": "Category record",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "category"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "category_id",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "cc86df9b-2842-4879-b7ae-c0a4070aba2b",
+      "name": "Get child categories",
+      "request": {
+        "name": "Get child categories",
+        "description": {},
+        "url": {
+          "path": [
+            "category",
+            "children"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "category_id",
+              "value": "<integer>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d4038290-4d33-4f3b-9199-92594accb783",
+          "name": "Child categories",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "category",
+                "children"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "category_id",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "8b807fcb-9c7e-4b09-8dd5-0089e46bbfda",
+      "name": "Get series in a category",
+      "request": {
+        "name": "Get series in a category",
+        "description": {},
+        "url": {
+          "path": [
+            "category",
+            "series"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "category_id",
+              "value": "<integer>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "45b23bbd-d312-4b25-8d19-80a667c09027",
+          "name": "Series records",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "category",
+                "series"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "category_id",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "22a246da-6b07-4ad9-8d71-55dea19dce35",
+      "name": "Get all releases",
+      "request": {
+        "name": "Get all releases",
+        "description": {},
+        "url": {
+          "path": [
+            "releases"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "1be0a903-1332-4e0b-b77c-b1a6d526c12e",
+          "name": "Releases",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "releases"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "310f9182-11bd-406b-994d-4ef4b0300ab4",
+      "name": "Get a release",
+      "request": {
+        "name": "Get a release",
+        "description": {},
+        "url": {
+          "path": [
+            "release"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "release_id",
+              "value": "<integer>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a034348c-2eec-4bc5-ba90-6c442dc48452",
+          "name": "Release record",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "release"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "release_id",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "0f377227-09ab-4903-a450-7125953fb79f",
+      "name": "Get series for a release",
+      "request": {
+        "name": "Get series for a release",
+        "description": {},
+        "url": {
+          "path": [
+            "release",
+            "series"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "release_id",
+              "value": "<integer>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "e766fe47-5842-495b-8229-ad1abb142270",
+          "name": "Series records",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "release",
+                "series"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "release_id",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "270189ec-0322-462b-8e31-7993ce7b2151",
+      "name": "Get a series",
+      "request": {
+        "name": "Get a series",
+        "description": {},
+        "url": {
+          "path": [
+            "series"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "series_id",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "dd206db4-81ea-4a15-a3da-2851d09b78f9",
+          "name": "Series record",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "series"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "series_id",
+                  "value": "<string>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "88872b60-7e44-4248-b99c-0a2ca78bc565",
+      "name": "Get observations for a series",
+      "request": {
+        "name": "Get observations for a series",
+        "description": {},
+        "url": {
+          "path": [
+            "series",
+            "observations"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "series_id",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "observation_start",
+              "value": "<date>"
+            },
+            {
+              "disabled": false,
+              "key": "observation_end",
+              "value": "<date>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "6224f051-eebd-4a7a-9912-637b9d77e746",
+          "name": "Observation records",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "series",
+                "observations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "series_id",
+                  "value": "<string>"
+                },
+                {
+                  "key": "observation_start",
+                  "value": "<date>"
+                },
+                {
+                  "key": "observation_end",
+                  "value": "<date>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "9cdc8729-73ea-4015-a2bf-21346d6c729b",
+      "name": "Search series by text",
+      "request": {
+        "name": "Search series by text",
+        "description": {},
+        "url": {
+          "path": [
+            "series",
+            "search"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "search_text",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "bbbe3769-0759-4c0d-82c5-3e668b370bbf",
+          "name": "Search results",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "series",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "search_text",
+                  "value": "<string>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7da489ac-0d1f-48f0-8d48-769cf8601568",
+      "name": "Get all sources",
+      "request": {
+        "name": "Get all sources",
+        "description": {},
+        "url": {
+          "path": [
+            "sources"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "aac69e0e-a6d5-4564-a034-cc8ccd68369d",
+          "name": "Sources",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "sources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "d6334ec9-9ee9-4fab-a90d-fce082820b8b",
+      "name": "Get a source",
+      "request": {
+        "name": "Get a source",
+        "description": {},
+        "url": {
+          "path": [
+            "source"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "source_id",
+              "value": "<integer>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "28f93984-c0ec-4bbe-bb4c-364dd03719d5",
+          "name": "Source record",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "source"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "source_id",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "5cc22b4b-7f5a-47ff-a4e3-e0fb53542ece",
+      "name": "Get all tags",
+      "request": {
+        "name": "Get all tags",
+        "description": {},
+        "url": {
+          "path": [
+            "tags"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3ace07c1-7391-4ea7-b1e1-6824bae230fc",
+          "name": "Tags",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "tags"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7d664a11-f2f1-4950-9d22-da614f40a886",
+      "name": "Get related tags",
+      "request": {
+        "name": "Get related tags",
+        "description": {},
+        "url": {
+          "path": [
+            "related_tags"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "tag_names",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "6ad444ba-183d-47cd-8f25-b9d22eabdfde",
+          "name": "Related tags",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "related_tags"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "tag_names",
+                  "value": "<string>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.stlouisfed.org/fred",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "4023c213-b485-496e-8f6d-0310b3210ea3",
+    "name": "Federal Reserve FRED API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The FRED API allows developers to retrieve economic data from the Federal Reserve Bank of St. Louis including categories, releases, series, sources, tags, and observations across thousands of economic time series.\n\nContact Support:\n Name: Federal Reserve Bank of St. Louis",
+      "type": "text/plain"
+    }
+  }
+}
