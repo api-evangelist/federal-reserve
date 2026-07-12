@@ -34,12 +34,18 @@ apis:
       The FRED API allows developers to retrieve economic data from the Federal Reserve Bank of St. Louis including
       categories, releases, series, sources, tags, and observations across thousands of economic time series.
 common:
+  - type: DomainSecurity
+    url: security/federal-reserve-domain-security.yml
+  - type: Authentication
+    url: authentication/federal-reserve-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/federal-reserve-board
   - type: Website
     url: https://www.federalreserve.gov/
   - type: Documentation
     url: https://fred.stlouisfed.org/docs/api/fred
+  - url: https://www.federalreserve.gov/feeds/press_all.xml
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
