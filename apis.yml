@@ -34,6 +34,8 @@ apis:
       The FRED API allows developers to retrieve economic data from the Federal Reserve Bank of St. Louis including
       categories, releases, series, sources, tags, and observations across thousands of economic time series.
 common:
+  - type: AgenticAccess
+    url: agentic-access/federal-reserve-agentic-access.yml
   - type: DomainSecurity
     url: security/federal-reserve-domain-security.yml
   - type: Authentication
