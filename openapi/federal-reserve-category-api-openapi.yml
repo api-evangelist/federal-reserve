@@ -1,0 +1,67 @@
+openapi: 3.0.3
+info:
+  title: Federal Reserve FRED Category API
+  description: The FRED API allows developers to retrieve economic data from the Federal Reserve Bank of St. Louis including categories, releases, series, sources, tags, and observations across thousands of economic time series.
+  version: '1.0'
+  contact:
+    name: Federal Reserve Bank of St. Louis
+    url: https://fred.stlouisfed.org/docs/api/fred/
+servers:
+- url: https://api.stlouisfed.org/fred
+  description: Production
+security:
+- ApiKey: []
+tags:
+- name: Category
+paths:
+  /category:
+    get:
+      summary: Get a category
+      operationId: getCategory
+      parameters:
+      - name: category_id
+        in: query
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Category record
+      tags:
+      - Category
+  /category/children:
+    get:
+      summary: Get child categories
+      operationId: getCategoryChildren
+      parameters:
+      - name: category_id
+        in: query
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Child categories
+      tags:
+      - Category
+  /category/series:
+    get:
+      summary: Get series in a category
+      operationId: getCategorySeries
+      parameters:
+      - name: category_id
+        in: query
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Series records
+      tags:
+      - Category
+components:
+  securitySchemes:
+    ApiKey:
+      type: apiKey
+      in: query
+      name: api_key

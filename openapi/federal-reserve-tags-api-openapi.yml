@@ -1,0 +1,31 @@
+openapi: 3.0.3
+info:
+  title: Federal Reserve FRED Category Tags API
+  description: The FRED API allows developers to retrieve economic data from the Federal Reserve Bank of St. Louis including categories, releases, series, sources, tags, and observations across thousands of economic time series.
+  version: '1.0'
+  contact:
+    name: Federal Reserve Bank of St. Louis
+    url: https://fred.stlouisfed.org/docs/api/fred/
+servers:
+- url: https://api.stlouisfed.org/fred
+  description: Production
+security:
+- ApiKey: []
+tags:
+- name: Tags
+paths:
+  /tags:
+    get:
+      summary: Get all tags
+      operationId: getTags
+      responses:
+        '200':
+          description: Tags
+      tags:
+      - Tags
+components:
+  securitySchemes:
+    ApiKey:
+      type: apiKey
+      in: query
+      name: api_key
