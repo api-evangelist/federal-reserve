@@ -5,7 +5,20 @@ description: >-
   data from the FRED and ALFRED websites hosted by the Economic Research Division of the Federal Reserve Bank of St.
   Louis.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/federal-reserve.png
 access: 3rd-Party
 created: '2024-12-03'
 modified: '2026-05-19'
@@ -17,22 +30,102 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: federal-reserve:federal-reserve
-    name: Federal Reserve FRED API
-    tags:
-      - Economics
-      - Finance
-    humanURL: https://fred.stlouisfed.org/docs/api/fred
-    baseURL: https://api.stlouisfed.org/fred
-    properties:
-      - url: https://fred.stlouisfed.org/docs/api/fred
-        type: Documentation
-      - url: >-
-          https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/openapi/federal-reserve-fred-openapi.yml
-        type: OpenAPI
-    description: >-
-      The FRED API allows developers to retrieve economic data from the Federal Reserve Bank of St. Louis including
-      categories, releases, series, sources, tags, and observations across thousands of economic time series.
+- aid: federal-reserve:federal-reserve-category-api
+  name: Federal Reserve Category API
+  description: The Category API from Federal Reserve — 3 operation(s) for category.
+  humanURL: https://fred.stlouisfed.org/docs/api/fred
+  baseURL: https://api.stlouisfed.org/fred
+  tags:
+  - Category
+  properties:
+  - type: OpenAPI
+    url: openapi/federal-reserve-category-api-openapi.yml
+  - type: Documentation
+    url: https://fred.stlouisfed.org/docs/api/fred
+- aid: federal-reserve:federal-reserve-related-tags-api
+  name: Federal Reserve Related Tags API
+  description: The Related Tags API from Federal Reserve — 1 operation(s) for related tags.
+  humanURL: https://fred.stlouisfed.org/docs/api/fred
+  baseURL: https://api.stlouisfed.org/fred
+  tags:
+  - Related Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/federal-reserve-related-tags-api-openapi.yml
+  - type: Documentation
+    url: https://fred.stlouisfed.org/docs/api/fred
+- aid: federal-reserve:federal-reserve-release-api
+  name: Federal Reserve Release API
+  description: The Release API from Federal Reserve — 2 operation(s) for release.
+  humanURL: https://fred.stlouisfed.org/docs/api/fred
+  baseURL: https://api.stlouisfed.org/fred
+  tags:
+  - Release
+  properties:
+  - type: OpenAPI
+    url: openapi/federal-reserve-release-api-openapi.yml
+  - type: Documentation
+    url: https://fred.stlouisfed.org/docs/api/fred
+- aid: federal-reserve:federal-reserve-releases-api
+  name: Federal Reserve Releases API
+  description: The Releases API from Federal Reserve — 1 operation(s) for releases.
+  humanURL: https://fred.stlouisfed.org/docs/api/fred
+  baseURL: https://api.stlouisfed.org/fred
+  tags:
+  - Releases
+  properties:
+  - type: OpenAPI
+    url: openapi/federal-reserve-releases-api-openapi.yml
+  - type: Documentation
+    url: https://fred.stlouisfed.org/docs/api/fred
+- aid: federal-reserve:federal-reserve-series-api
+  name: Federal Reserve Series API
+  description: The Series API from Federal Reserve — 3 operation(s) for series.
+  humanURL: https://fred.stlouisfed.org/docs/api/fred
+  baseURL: https://api.stlouisfed.org/fred
+  tags:
+  - Series
+  properties:
+  - type: OpenAPI
+    url: openapi/federal-reserve-series-api-openapi.yml
+  - type: Documentation
+    url: https://fred.stlouisfed.org/docs/api/fred
+- aid: federal-reserve:federal-reserve-source-api
+  name: Federal Reserve Source API
+  description: The Source API from Federal Reserve — 1 operation(s) for source.
+  humanURL: https://fred.stlouisfed.org/docs/api/fred
+  baseURL: https://api.stlouisfed.org/fred
+  tags:
+  - Source
+  properties:
+  - type: OpenAPI
+    url: openapi/federal-reserve-source-api-openapi.yml
+  - type: Documentation
+    url: https://fred.stlouisfed.org/docs/api/fred
+- aid: federal-reserve:federal-reserve-sources-api
+  name: Federal Reserve Sources API
+  description: The Sources API from Federal Reserve — 1 operation(s) for sources.
+  humanURL: https://fred.stlouisfed.org/docs/api/fred
+  baseURL: https://api.stlouisfed.org/fred
+  tags:
+  - Sources
+  properties:
+  - type: OpenAPI
+    url: openapi/federal-reserve-sources-api-openapi.yml
+  - type: Documentation
+    url: https://fred.stlouisfed.org/docs/api/fred
+- aid: federal-reserve:federal-reserve-tags-api
+  name: Federal Reserve Tags API
+  description: The Tags API from Federal Reserve — 1 operation(s) for tags.
+  humanURL: https://fred.stlouisfed.org/docs/api/fred
+  baseURL: https://api.stlouisfed.org/fred
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/federal-reserve-tags-api-openapi.yml
+  - type: Documentation
+    url: https://fred.stlouisfed.org/docs/api/fred
 common:
   - type: AgenticAccess
     url: agentic-access/federal-reserve-agentic-access.yml
