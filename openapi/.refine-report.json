@@ -1,0 +1,28 @@
+{
+  "provider": "federal-reserve",
+  "sources": [
+    "federal-reserve-category-api-openapi.yml",
+    "federal-reserve-related-tags-api-openapi.yml",
+    "federal-reserve-release-api-openapi.yml",
+    "federal-reserve-releases-api-openapi.yml",
+    "federal-reserve-series-api-openapi.yml",
+    "federal-reserve-source-api-openapi.yml",
+    "federal-reserve-sources-api-openapi.yml",
+    "federal-reserve-tags-api-openapi.yml"
+  ],
+  "outputs": [
+    "federal-reserve-category-api-openapi.yml",
+    "federal-reserve-related-tags-api-openapi.yml",
+    "federal-reserve-release-api-openapi.yml",
+    "federal-reserve-releases-api-openapi.yml",
+    "federal-reserve-series-api-openapi.yml",
+    "federal-reserve-source-api-openapi.yml",
+    "federal-reserve-sources-api-openapi.yml",
+    "federal-reserve-tags-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
