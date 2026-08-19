@@ -28,7 +28,7 @@ tags:
   - Federal Government
   - Finance
 url: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/apis.yml
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: federal-reserve:federal-reserve-category-api
   name: Federal Reserve Category API
