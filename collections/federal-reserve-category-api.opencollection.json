@@ -1,0 +1,80 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Federal Reserve FRED Category API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Category",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a category",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.stlouisfed.org/fred/category",
+            "params": [
+              {
+                "name": "category_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a category"
+        },
+        {
+          "info": {
+            "name": "Get child categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.stlouisfed.org/fred/category/children",
+            "params": [
+              {
+                "name": "category_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get child categories"
+        },
+        {
+          "info": {
+            "name": "Get series in a category",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.stlouisfed.org/fred/category/series",
+            "params": [
+              {
+                "name": "category_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get series in a category"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

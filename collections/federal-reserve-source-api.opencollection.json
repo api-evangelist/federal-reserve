@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Federal Reserve FRED Category Source API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Source",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a source",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.stlouisfed.org/fred/source",
+            "params": [
+              {
+                "name": "source_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a source"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

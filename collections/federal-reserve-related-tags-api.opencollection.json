@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Federal Reserve FRED Category Related Tags API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Related Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get related tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.stlouisfed.org/fred/related_tags",
+            "params": [
+              {
+                "name": "tag_names",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get related tags"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

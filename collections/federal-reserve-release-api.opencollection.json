@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Federal Reserve FRED Category Release API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Release",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a release",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.stlouisfed.org/fred/release",
+            "params": [
+              {
+                "name": "release_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get a release"
+        },
+        {
+          "info": {
+            "name": "Get series for a release",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.stlouisfed.org/fred/release/series",
+            "params": [
+              {
+                "name": "release_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get series for a release"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
