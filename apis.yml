@@ -25,6 +25,10 @@ modified: '2026-05-19'
 position: Consumer
 tags:
   - Economics
+  - Federal-Government
+  - Finance
+tags_raw:
+  - Economics
   - Federal Government
   - Finance
 url: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/apis.yml
