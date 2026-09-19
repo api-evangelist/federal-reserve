@@ -76,6 +76,8 @@ apis:
   humanURL: https://fred.stlouisfed.org/docs/api/fred
   baseURL: https://api.stlouisfed.org/fred
   tags:
+  - Releases
+  tags_raw:
   - Release
   properties:
   - type: OpenAPI
