@@ -1,14 +1,7 @@
 {
   "provider": "federal-reserve",
   "sources": [
-    "federal-reserve-category-api-openapi.yml",
-    "federal-reserve-related-tags-api-openapi.yml",
-    "federal-reserve-release-api-openapi.yml",
-    "federal-reserve-releases-api-openapi.yml",
-    "federal-reserve-series-api-openapi.yml",
-    "federal-reserve-source-api-openapi.yml",
-    "federal-reserve-sources-api-openapi.yml",
-    "federal-reserve-tags-api-openapi.yml"
+    "_original/federal-reserve-fred-openapi.yml"
   ],
   "outputs": [
     "federal-reserve-category-api-openapi.yml",
@@ -23,6 +16,40 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "federal-reserve-fred-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /category -> Category",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /category/children -> Category",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /category/series -> Category",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /releases -> Releases",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /release -> Release",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /release/series -> Release",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /series -> Series",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /series/observations -> Series",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /series/search -> Series",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /sources -> Sources",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /source -> Source",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /tags -> Tags",
+    "federal-reserve-fred-openapi.yml: tagged paths GET /related_tags -> Related Tags",
+    "federal-reserve-fred-openapi.yml: declared missing tag: Category",
+    "federal-reserve-fred-openapi.yml: declared missing tag: Related Tags",
+    "federal-reserve-fred-openapi.yml: declared missing tag: Release",
+    "federal-reserve-fred-openapi.yml: declared missing tag: Releases",
+    "federal-reserve-fred-openapi.yml: declared missing tag: Series",
+    "federal-reserve-fred-openapi.yml: declared missing tag: Source",
+    "federal-reserve-fred-openapi.yml: declared missing tag: Sources",
+    "federal-reserve-fred-openapi.yml: declared missing tag: Tags",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "federal-reserve-category-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "federal-reserve-related-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "federal-reserve-release-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "federal-reserve-releases-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "federal-reserve-series-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "federal-reserve-source-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "federal-reserve-sources-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "federal-reserve-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
