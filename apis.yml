@@ -37,12 +37,13 @@ modified: '2026-05-19'
 position: Consuming
 tags:
   - Economics
-  - Federal-Government
+  - Federal Government
   - Finance
 tags_raw:
   - Economics
   - Federal Government
   - Finance
+  - Federal-Government
 url: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/apis.yml
 specificationVersion: '0.23'
 apis:
